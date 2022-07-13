@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>設定</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js/d3.min.js"></script>
+<script type="text/javascript" src="js/setting.js"></script>
+</head>
+<body onload="on_load()">
+    <table class="title">
+        <tr>
+            <td>&nbsp;設定</td>
+            <td style="text-align: right;">
+                <input style="width: 80px" type="button" class="button" value="戻る" onclick="do_back()" />
+                <input style="width: 80px" type="submit" class="button" value="確認" onclick="save_setting()"/>
+            </td>
+        </tr>
+    </table>
+    <table class="body">
+        <tr>
+            <td colspan="4" id="error_message" height="30px" style="color: red;"></td>
+        </tr>
+        <tr>
+            <td colspan="4">初期設定</td>
+        </tr>
+        <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;周波数[MHz]：</td>
+            <td><input id="frequency" name="frequency" type="text" value="5220"/></td>
+            <td>MACアドレス（AP）：</td>
+            <td><input id="adress_ap" name="adress_ap" type="text" value="bc:c3:42:a2:2c:40"/></td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <td>MACアドレス（STA）：</td>
+            <td><input id="adress_sta" name="adress_sta" type="text" value="d8:c4:6a:87:2c:5f"/></td>
+        </tr>
+        <tr>
+            <td colspan="4" style="padding-top: 10px;">学習データ作成用設定</td>
+        </tr>
+        <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学習ファイル名：</td>
+            <td><input id="learning_file_name" name="learning_file_name" type="text" value="learning_data.npy" /></td>
+            <td>出力先：</td>
+            <td><input id="learning_file_output" name="learning_file_output" type="text" value="learning"/></td>
+        </tr>
+        <tr>
+            <td colspan="4" style="padding-top: 30px;">モデル作成用設定</td>
+        </tr>
+        <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;モデルファイル名：</td>
+            <td><input id="model_file_name" name="model_file_name" type="text" value="model.sav" /></td>
+            <td>出力先：</td>
+            <td><input id="model_file_ouput" name="model_file_ouput" type="text" value="model"/></td>
+        </tr>
+        <tr>
+            <td colspan="4" style="padding-top: 30px;">デモ用設定</td>
+        </tr>
+        <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ループ用クールタイム[回]：</td>
+            <td><input id="loop_time" name="loop_time" type="text" value="0"/></td>
+            <td>デモ用測定時間[s]：</td>
+            <td><input id="measurement_time" name="measurement_time" type="text" value="2"/></td>
+        </tr>
+        <tr>
+            <td colspan="4" style="padding-bottom: 30px;"></td>
+        </tr>
+    </table>
+</body>
+</html>

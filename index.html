@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>検出結果表示</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/d3.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body onload="on_load()">
+    <div id="my_modal" class="modal">
+        <div id="learning_settring_dialog" class="modal-content">
+            <table>
+                <tr>
+                    <td style="text-align: right;">
+                        測定時間[s]:
+                    </td>
+                    <td>
+                        <input id="learning_time" name="learning_time" type="text" value="30" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">
+                        ラベル:
+                    </td>
+                    <td>
+                        <input id="learning_label" name="learning_label" type="text" value="0" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" height="30px" style="color: red; font-size: 12px;">
+                        <span id="learning_error_message"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="button" class="button" style="width: 100px" value="確認" onclick="do_learning()" />
+                        <input type="button" class="button" style="width: 100px" value="取消" onclick="close_dialog()" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <form id="main_form" method="post">
+        <table class="title">
+            <tr>
+                <td>&nbsp;結果表示</td>
+                <td style="text-align: right;">
+                    <input type="button" class="button" style="width: 100px" value="設定" onclick="open_setting()" />
+                    <input type="button" class="button" style="width: 150px" value="学習データ作成" onclick="open_dialog()" />
+                    <input type="button" class="button" style="width: 100px" value="モデル作成" onclick="make_model()" />
+                    <input type="button" class="button" style="width: 100px" value="デモ実行" onclick="exec_demo()" />
+                </td>
+            </tr>
+        </table>
+        <table class="body">
+            <tr>
+                <td style="border-right: 2px solid skyblue; vertical-align: top; padding: 14px; width: 50%">
+                    <table style="width: 100%; height: 100%;">
+                        <tr>
+                            <td style="color: red; height: 20px; font-size: 16px;"><span id="message"></span></td>
+                        </tr>
+                        <tr>
+                            <td style="height:200px; border: 2px solid skyblue; text-align: center;">
+                                <img id="image" alt="" src="" style="width: 200px; height: 200px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 50px; text-align: center;"><span id="name">-</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 50px;">精度：<span id="accuracy">--</span>%</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 50px;">取得パケット数：<span id="package">--</span>個</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="chart-table">
+                        <tr>
+                            <td>
+                                <div id="chart-snr"></div>
+                                <td>
+                        </tr>
+                    </table>
+                    <table class="chart-table">
+                        <tr>
+                            <td>
+                                <div id="chart-frequency"></div>
+                                <td>
+                        </tr>
+                    </table>
+                    <table class="chart-table">
+                        <tr>
+                            <td>
+                                <div id="chart-result"></div>
+                                <td>
+                        </tr>
+                    </table>
+                    </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

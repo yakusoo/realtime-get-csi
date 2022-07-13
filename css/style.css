@@ -1,0 +1,132 @@
+@charset "UTF-8";
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px;
+}
+
+.title {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: skyblue;
+    width: 100%;
+    height: 45px;
+    font-size: 28px;
+}
+
+.title td {
+    white-space: nowrap;
+}
+
+.body {
+    position: absolute;
+    left: 0px;
+    top: 45px;
+    width: 100%;
+    border-bottom: 2px solid skyblue;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.body td {
+    text-align: left;
+    white-space: nowrap;
+}
+
+.button {
+    display: inline-block;
+    width: 120px;
+    padding: 0.4em;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #EC407A;
+    border: 2px solid #EC407A;
+    border-radius: 3px;
+    transition: .4s;
+}
+
+.button:hover {
+    background: #EC407A;
+    color: #fff;
+}
+
+.chart-table {
+    width: 185px;
+    height: 60px;
+    border: 2px solid skyblue;
+    margin: 40px 0px 15px 15px;
+}
+
+.axis {
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+.smoothline {
+    fill: none;
+    stroke: #e74c3c;
+    stroke-width: 3px;
+}
+
+.smoothline1 {
+    fill: none;
+    stroke: #ff0000;
+    stroke-width: 3px;
+}
+
+.smoothline2 {
+    fill: none;
+    stroke: #ff8000;
+    stroke-width: 3px;
+}
+
+.smoothline3 {
+    fill: none;
+    stroke: #008000;
+    stroke-width: 3px;
+}
+
+.smoothline4 {
+    fill: none;
+    stroke: #0000ff;
+    stroke-width: 3px;
+}
+
+.smoothline5 {
+    fill: none;
+    stroke: #80ffff;
+    stroke-width: 3px;
+}
+
+.smoothline6 {
+    fill: none;
+    stroke: #c0c0c0;
+    stroke-width: 3px;
+}
+
+.dot {
+    fill: #ffab00;
+    stroke: #fff;
+}
+
+.dottext {
+    fill: black;
+    font-size: 30px;
+}
